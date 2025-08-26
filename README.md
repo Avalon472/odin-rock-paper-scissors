@@ -1,1 +1,2 @@
 # odin-rock-paper-scissors
+This project is meant to showcase basic javascript skills through a rock, paper, scissors game. A GUI will be added to enhance the experience by taking the game outside of the console.
