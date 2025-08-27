@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <script src="gameLoop.js"></script>
+    <!--<script src="gameLoop.js"></script>-->
     <div class = "cursor"></div>
      <script>
         const cursor = document.querySelector(".cursor");
@@ -20,5 +20,25 @@
             cursor.style.left = x + "px";
         })
      </script>
+     <div id = first_Page class = page>
+        <h1 id = title>Warrior's Wisdom</h1>
+     </div>
+     <div id = second_Page class = page>
+     </div>
+     <div id = third_Page class = page>
+        <div class = instruction id = i1>
+            <h2>First option</h2>
+        </div>
+        <div class = instruction id = i2>
+            <h2>Second option</h2>
+        </div>
+        <div class = instruction id = i3>
+            <h2>Third option</h2>
+        </div>
+        <div id = start_Button>
+            <button>Begin</button>
+        </div>
+     </div>
+
 </body>
 </html>

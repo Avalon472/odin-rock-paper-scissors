@@ -1,12 +1,78 @@
 body{
     background: black;
-    height:100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.cursor{
+.page{
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+#title{
+    padding-bottom: 10vh;
+    font-size: 5em;
+}
+
+#first_Page{
+    background: linear-gradient(#000000, #151515);
+}
+
+#second_Page{
+    background: linear-gradient(#151515, #303030, #151515);
+}
+
+#third_Page{
+    background: linear-gradient(#151515, #000000);
+    flex-direction: column;
+}
+.instruction{
+    height: 20vh;
+    width: 100vw;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#i1{
+    background: linear-gradient(to left, 
+    rgba(200,0,0,0.005), rgba(200,0,0,0.1),
+    rgba(255,0,0,0.3),
+    rgba(200,0,0,0.1), rgba(200,0,0,0.005)),
+    linear-gradient(to bottom,
+    rgba(200,0,0,0.005), rgba(200,0,0,0.1),
+    rgba(255,0,0,0.3),
+    rgba(200,0,0,0.1), rgba(200,0,0,0.005));
+
+    background-blend-mode: multiply;
+}
+#i2{
+    background: radial-gradient(ellipse at center,
+  rgba(255,0,0,0.15) 30%,
+  rgba(200,0,0,0.1) 60%,
+  rgba(0,0,0,1) 100%);
+}
+#i3{
+      background: red; /* or your gradient color base */
+  
+  -webkit-mask-image: 
+    linear-gradient(to left,
+      rgba(0,0,0,0), rgba(0,0,0,1), rgba(0,0,0,0)),
+    linear-gradient(to bottom,
+      rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,0));
+  -webkit-mask-composite: intersect; /* WebKit syntax */
+  mask-composite: intersect;         /* Standard */
+  
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+}
+
+#cursor{
     z-index: 999;
     position: fixed;
     background: darkred;
