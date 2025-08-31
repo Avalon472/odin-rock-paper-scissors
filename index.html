@@ -7,38 +7,38 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <!--<script src="gameLoop.js"></script>-->
+
     <div class = "cursor"></div>
-     <script>
-        const cursor = document.querySelector(".cursor");
-
-        document.addEventListener("mousemove", (e) => {
-            let x = e.clientX;
-            let y = e.clientY;
-
-            cursor.style.top = y + "px";
-            cursor.style.left = x + "px";
-        })
-     </script>
      <div id = first_Page class = page>
         <h1 id = title>Warrior's Wisdom</h1>
      </div>
+
      <div id = second_Page class = page>
      </div>
+
      <div id = third_Page class = page>
         <div class = instruction id = i1>
             <h2>First option</h2>
+	    <img class = "icon" alt = "Sword">
         </div>
+
         <div class = instruction id = i2>
             <h2>Second option</h2>
+	    <img class = "icon" alt = "Spear">
         </div>
+
         <div class = instruction id = i3>
             <h2>Third option</h2>
+	    <img class = "icon" alt = "Axe">
         </div>
-        <div id = start_Button>
-            <button>Begin</button>
+        
+        <div>
+            <button  id = start_Button>Begin</button>
         </div>
      </div>
+
+<script src = "effects.js"></script>
+<!--<script src="gameLoop.js"></script>-->
 
 </body>
 </html>
