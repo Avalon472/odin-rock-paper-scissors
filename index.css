@@ -7,12 +7,15 @@ body{
 }
 
 .page{
-    height: 100vh;
+    height: 95vh;
     width: 100vw;
     display:flex;
     justify-content: center;
     align-items: center;
     color: white;
+}
+#second_page{
+  height: 50vh;
 }
 #title{
     padding-bottom: 10vh;
@@ -183,13 +186,13 @@ filter: saturate(1.75);
 
 #start_Button{
    border-radius: 15px;
-   height: 5vh;
-   width: 7.5vw;
+   padding: 12.5px;
    font-size: 20px;
    margin-top: 5vh;
    background-color: purple;
    border: none;
    transition: transform 0.2s ease-in-out;
+   color: white;
 }
 #start_Button:hover{
    box-shadow: 0 1px 30px purple;
@@ -232,4 +235,3 @@ filter: saturate(1.75);
 .pulsing{
    animation: pulse 0.5s ease-in-out;
 }
-
