@@ -40,7 +40,17 @@
 #textbox > *{
   height: 80%;
   width: 30%;
-  background-color: red;
+  background-color: lightgray;
+}
+#status{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+  text-align: center;
+}
+#status > *{
+  font-size: 45px;
 }
 
 #scores{
