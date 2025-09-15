@@ -30,6 +30,27 @@ document.querySelectorAll('.choice').forEach(choice => {
     e.preventDefault();
     const value = this.dataset.value;
     console.log("You chose:", value);
-    // now do something with "value"
+    setImage(value, "PSelect");
   });
 });
+
+function setImage(input, parent){
+  const container = document.getElementById(parent);
+
+  container.innerHTML = "";
+  let img = document.createElement("img")
+  img.style.maxWidth = "100%";
+  img.style.maxHeight = "100%";
+
+  if (input === "sword"){
+    img.src = "sword.png";
+  }
+  else if (input === "spear"){
+    img.src = "spear.png";
+  }
+  else if (input === "axe"){
+    img.src = "axe.png";
+  }
+
+  container.appendChild(img);
+}

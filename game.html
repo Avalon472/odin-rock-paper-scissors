@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Warrior's Wisdom - Game</title>
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="game.css"
+    <link rel="stylesheet" href="game.css">
 </head>
 <body>
     <div class = "page" id = "gamePage">
@@ -15,13 +15,35 @@
             <a href = "index.html"><img src = "restart.jpg" alt = restart id = ></a>
         </div>
 
+        <div id = "rules">
+            <p>Sword beats Spear</p>
+            <p>Spear beats Axe</p>
+            <p>Axe beats Sword</p>
+        </div>
+
         <div class = "screen" id = "textSpace">
             <div id = "textbox">
-                <div class = "selection"></div>
+                <div class = "selection" id = "PSelect"></div>
                 <div class = "status"></div>
-                <div class = "selection"></div>
+                <div class = "selection" id = "CSelect"></div>
             </div>
         </div>
+
+        <div id = "scores">
+            <div>
+                <H1> Player Score: </H1>
+                <div id = "PScore">
+                    <h1>0</h1>
+                </div>
+            </div>
+            <div>
+                <h1> CPU Score: </h1>
+                <div id = "CScore">
+                    <h1>0</h1>
+                </div>
+            </div>
+        </div>
+        
         <div class = "screen" id = "choiceSpace">
             <input type = "image" src = "sword.png" class = "choice" data-value = "sword">
             <input type = "image" src = "spear.png" class = "choice" data-value = "spear">
