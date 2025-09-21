@@ -5,6 +5,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+h1{
+  text-align: center;
+}
 
 .page{
     height: 95vh;
@@ -14,9 +17,28 @@ body{
     align-items: center;
     color: white;
 }
-#second_page{
-  height: 33vh;
+
+#scrollIndicator > div{
+  height: 35px;
+  width: 35px;
+  border-right: 3px solid;
+  border-bottom: 3px solid;
+  rotate: 45deg;
+  animation: bounce 3s infinite;
 }
+#scrollIndicator > div:nth-child(2){
+  animation-delay: 0.125s;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translate(-25px, -25px);
+  }
+}
+
 #title{
     padding-bottom: 10vh;
     font-size: 5em;
@@ -24,10 +46,12 @@ body{
 
 #first_Page{
     background: linear-gradient(#151515, #303030, #151515);
+    flex-direction: column;
 }
 
 #second_Page{
     background: linear-gradient(#151515, #070707);
+    height: 33vh;
 }
 
 #third_Page{
@@ -41,12 +65,22 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+.instruction > h2{
+  font-size: 50px;
+  margin-bottom: 0px;
 }
 .icon{
+    filter: invert();
+    height: 25px;
+}
+.instruction > .icon{
     position: absolute;
     top: 50%;
     right: 25%;
     transform: translate(calc(50% + 30px), -50%);
+    height: 75px;
 }
 #i1 {
   filter:saturate(1);
@@ -80,6 +114,11 @@ body{
 #i1:hover{
 filter: saturate(1.75);
 }
+#i1 > h2{
+  color: rgb(170, 30, 30);
+  text-shadow: 1px 1px rgb(150, 0, 0);
+}
+
 #i2 {
   filter: saturate(1);
   transition: filter 0.3s ease-in-out;
@@ -112,6 +151,10 @@ filter: saturate(1.75);
 #i2:hover {
   filter: saturate(1.75);
 }
+#i2 > h2{
+  color: rgb(0, 0, 255);
+  text-shadow: 1px 1px rgb(0, 0, 100);
+}
 
 #i3 {
   filter: saturate(1);
@@ -143,8 +186,13 @@ filter: saturate(1.75);
 }
 
 #i3:hover {
-  filter: saturate(1.75);
+  filter: saturate(2.75);
 }
+#i3 > h2{
+  color: rgb(30, 150, 30);
+  text-shadow: 1px 1px rgb(0, 100, 0);
+}
+
 .cursor{
     z-index: 999;
     position: fixed;

@@ -10,8 +10,31 @@
   left: 0;
   display: flex;
   flex-direction: row;
-  gap: 30px;
+  gap: 4vw;
   margin: 20px;
+  margin-left: 10px;
+}
+
+#navbar > *{
+  display: flex;
+}
+
+#rules{
+    display: flex;
+    height: 40px;
+    width: 50vw;
+    padding-top: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5vw;
+}
+#rules > *{
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    color: rgb(226, 217, 250);
+    font-weight: 600;
 }
 
 .screen{
@@ -23,34 +46,52 @@
 
 }
 #textSpace{
-  height: 60vh;
+  height: 50vh;
 }
 #textbox{
-  background-color: grey;
   border-radius: 30px;
   width: 80vw;
   height: 40vh;
-  margin-top: 5px;
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 0px;
+  background: linear-gradient(
+  rgb(62, 19, 141) 0%, 
+  rgb(54, 39, 80) 10%,
+  rgb(32, 18, 44) 50%, 
+  rgb(54, 39, 80) 90%,
+  rgb(62, 19, 141) 100%
+  );
 }
 #textbox > *{
-  height: 80%;
-  width: 30%;
-  background-color: lightgray;
+  height: 85%;
+  width: 28%;
+  background: radial-gradient(
+  rgb(255, 255, 255) 0%,
+  rgb(100, 99, 96) 80%,
+  rgb(134, 120, 53) 85%,
+  rgb(47, 25, 109) 97%
+  );
+  color: black;
+  padding: 1.5%;
 }
 #status{
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: blue;
+  background-color: black;
   text-align: center;
+  text-justify: center;
 }
 #status > *{
-  font-size: 45px;
+  font-size: 1.75em;
+  height: 90%;
+  width: 90%;
+  display: flex;
+  align-items: center;
 }
 
 #scores{
@@ -65,7 +106,7 @@
   align-items: center;
   justify-content: center;
   height: 60px;
-  font-size: 60px;
+  font-size: 4em;
 }
 
 #CScore{
@@ -73,22 +114,7 @@
   align-items: center;
   justify-content: center;
   height: 60px;
-  font-size: 60px;
-}
-
-#rules{
-    display: flex;
-    height: 40px;
-    width: 50vw;
-    padding-left: 25vw;
-    padding-top: 20px;
-    flex-direction: row;
-    gap: 35px;
-}
-#rules > *{
-    width: 120px;
-    height: 30px;
-    text-align: center;
+  font-size: 4em;
 }
 
 #choiceSpace{
@@ -104,22 +130,61 @@
   filter: invert(100%) hue-rotate(180deg);
   padding: 4vw;
 }
-
-.choice:hover{
-  filter: invert(100%) hue-rotate(180deg);
-  color: white;
-  background: radial-gradient(
-     rgba(0, 150, 0, 0.6) 10%,
-      rgba(0, 120, 0, 0.5) 30%,
-      rgba(0, 80, 0, 0.4) 50%,
-      rgba(0, 40, 0, 0.3) 70%,
-      rgba(0, 10, 0, 0.2) 90%,
-      rgba(0, 0, 0, 0) 100%);
-    background: filter blur(30px);
-    }
   
 .selection{
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 5px;
+}
+
+#choiceSpace > :nth-child(1):hover{
+
+background: radial-gradient(
+  rgba(200, 0, 0, 0.6) 10%,
+  rgba(220, 60, 60, 0.5) 30%,
+  rgba(240, 120, 120, 0.4) 50%,
+  rgba(250, 170, 170, 0.3) 70%,
+  rgba(255, 230, 230, 0.15) 85%,
+  rgba(255, 255, 255, 1) 100%);
+    background: filter blur(30px);
+}
+
+#choiceSpace > :nth-child(2):hover{
+
+background: radial-gradient(
+  rgba(0, 80, 255, 0.7) 10%, 
+  rgba(60, 140, 255, 0.5) 30%,
+  rgba(120, 180, 255, 0.35) 50%,
+  rgba(180, 210, 255, 0.25) 70%,
+  rgba(220, 235, 255, 0.15) 85%,
+  rgba(255, 255, 255, 1) 100%
+);
+    background: filter blur(30px);
+}
+
+#choiceSpace > :nth-child(3):hover{
+  filter: invert(100%) hue-rotate(180deg);
+
+background: radial-gradient(
+  rgba(0, 150, 0, 0.6) 10%,
+  rgba(60, 180, 60, 0.5) 30%,
+  rgba(120, 200, 120, 0.4) 50%,
+  rgba(180, 220, 180, 0.3) 70%,
+  rgba(220, 240, 220, 0.2) 90%,
+  rgba(255, 255, 255, 1) 100%);
+    background: filter blur(30px);
+    }
+
+.red{
+  color: rgb(233, 13, 13);
+  font-weight: 900;
+}
+.blue{
+  color: rgb(35, 115, 235);
+  font-weight: 900;
+}
+.green{
+  color: rgb(9, 165, 9);
+  font-weight: 900;
 }

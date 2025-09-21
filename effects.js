@@ -48,7 +48,7 @@ document.querySelectorAll('.choice').forEach(choice => {
 
 document.addEventListener("DOMContentLoaded", () => {
   let status = document.getElementById("status");
-  status.innerHTML = "<h1> Let the game begin! <h1>"
+  status.innerHTML = "<h1> Let the game begin! </h1>"
 })
 
 function compSelect(){
@@ -77,14 +77,14 @@ function playRound(humanChoice) {
   let message = "";
   compChoice = compSelect();
     if (humanChoice === compChoice)
-        message = "The round ends in a tie"
+        message = "The round ends in a tie."
     else if(humanChoice == "sword"){
         if(compChoice == "spear"){
           message = "Sword beats Spear. You win the round!"
           pWins++;
         }
         else{
-          message = "Axe beats Sword. You lose the round."
+          message = "Sword falters against Axe. You lose the round."
           cWins++
         }
     }
@@ -93,7 +93,7 @@ function playRound(humanChoice) {
           message = "Spear beats Axe. You win the round!"
           pWins++}
         else{
-            message = "Sword beats Spear. You lose the round."
+            message = "Spear falters against Sword. You lose the round."
           cWins++;}
     }
     else if(humanChoice == "axe"){
@@ -101,16 +101,16 @@ function playRound(humanChoice) {
             message = "Axe beats Sword. You win the round!"
           pWins++}
         else{
-            message = "Spear beats Axe. You lose the round."
+            message = "Axe falters against Spear. You lose the round."
           cWins++;}
     }
     if(pWins == 5)
       message = "You have won the game! Press restart to play again."
     else if (cWins == 5)
       message = "You have lost the game. Press restart to try again."
-    status.innerHTML = "<h1>" + message + "<h1>";
-    PScore.innerHTML = "<h1>" + pWins + "<h1>";
-    CScore.innerHTML = "<h1>" + cWins + "<h1>";
+    status.innerHTML = "<h1>" + message + "</h1>";
+    PScore.innerHTML = "<h1>" + pWins + "</h1>";
+    CScore.innerHTML = "<h1>" + cWins + "</h1>";
 }
 
 function setImage(input, parent){
@@ -122,13 +122,13 @@ function setImage(input, parent){
   img.style.maxHeight = "100%";
 
   if (input === "sword"){
-    img.src = "sword.png";
+    img.src = "images/sword.png";
   }
   else if (input === "spear"){
-    img.src = "spear.png";
+    img.src = "images/spear.png";
   }
   else if (input === "axe"){
-    img.src = "axe.png";
+    img.src = "images/axe.png";
   }
 
   container.appendChild(img);
