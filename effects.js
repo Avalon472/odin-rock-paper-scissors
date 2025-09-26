@@ -118,8 +118,8 @@ function setImage(input, parent){
 
   container.innerHTML = "";
   let img = document.createElement("img")
-  img.style.maxWidth = "100%";
-  img.style.maxHeight = "100%";
+  img.style.maxWidth = "95%";
+  img.style.maxHeight = "95%";
 
   if (input === "sword"){
     img.src = "images/sword.png";
